@@ -2,12 +2,18 @@ package com.zki.mission.service.impl;
 
 import java.util.List;
 
+import org.assertj.core.util.Lists;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import com.zki.mission.data.dao.repository.IServiceRepository;
 import com.zki.mission.data.model.Service;
+import com.zki.mission.data.repository.IServiceRepository;
 import com.zki.mission.service.IServiceService;
 
+/**
+ * Service manipulant les services (Prestation, ...)
+ * @author Zahir KALI (kalizahir@yahoo.fr)
+ *
+ */
 @org.springframework.stereotype.Service
 public class ServiceService implements IServiceService{
 
@@ -26,7 +32,7 @@ public class ServiceService implements IServiceService{
 
 	@Override
 	public List<Service> findAll() {
-		return repo.findAll();
+		return Lists.newArrayList(repo.findAll());
 	}
 
 	@Override

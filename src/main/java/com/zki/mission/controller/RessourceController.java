@@ -1,8 +1,6 @@
 package com.zki.mission.controller;
 
 import java.util.List;
-import java.util.Objects;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -41,12 +39,8 @@ public class RessourceController {
     }
 
     @DeleteMapping(path ={"/{id}"})
-    public Ressource delete(@PathVariable(value = "id", required = true) int id) {
-        Ressource toDelete = ressourceService.findById(id);
-        if(Objects.isNull(toDelete)) {
-        	ressourceService.delete(toDelete);
-        }
-    	return toDelete;
+    public void delete(@PathVariable(value = "id", required = true) int id) {
+    	ressourceService.delete(ressourceService.findById(id));
     }
 
     @SuppressWarnings("rawtypes")
