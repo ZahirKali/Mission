@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.zki.mission.data.model.Ressource;
 import com.zki.mission.service.IRessourceService;
 
-@CrossOrigin(origins = "http://localhost:4200", maxAge = 3600)
+@CrossOrigin
 @RestController
 @RequestMapping({"/api/ressource"})
 public class RessourceController {

@@ -4,12 +4,12 @@ import static java.lang.String.format;
 
 import java.util.List;
 
-import org.assertj.core.util.Lists;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.google.common.collect.Lists;
 import com.zki.mission.data.model.Ressource;
 import com.zki.mission.data.repository.IRessourceRepository;
 import com.zki.mission.service.IRessourceService;
