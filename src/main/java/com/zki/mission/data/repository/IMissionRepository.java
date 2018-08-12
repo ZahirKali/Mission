@@ -1,4 +1,8 @@
 package com.zki.mission.data.repository;
 
-public interface IMissionRepository{
+import org.springframework.data.repository.PagingAndSortingRepository;
+
+import com.zki.mission.data.model.Mission;
+
+public interface IMissionRepository extends PagingAndSortingRepository<Mission, Integer>{
 }
