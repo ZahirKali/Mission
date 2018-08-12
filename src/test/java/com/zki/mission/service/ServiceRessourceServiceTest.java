@@ -19,7 +19,7 @@ public class ServiceRessourceServiceTest extends GenericTest {
 	private IServiceRessourceService srs;
 	
 	@Test
-	public void testCreate() {		
+	public void testCreate() {	
 		ServiceRessource sr = new ServiceRessource();
 		sr.setRessource(rs.create(ressource4Test));
 		sr.setService(ss.create(service4Test));
