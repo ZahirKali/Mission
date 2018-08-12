@@ -1,7 +1,6 @@
 package com.zki.mission.service;
 
 import com.zki.mission.data.model.Mission;
-import com.zki.mission.data.model.ServiceRessource;
 
 /**
  * Interface pour la manipulation de la correspendance Service/Ressource.
