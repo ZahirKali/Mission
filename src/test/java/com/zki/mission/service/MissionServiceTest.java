@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import com.zki.mission.GenericTest;
 import com.zki.mission.data.model.Mission;
-import com.zki.mission.data.model.ServiceRessource;
 
 /**
  * Tester les fonctionnalitées importantes de l'application.

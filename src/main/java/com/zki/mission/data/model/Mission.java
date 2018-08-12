@@ -2,16 +2,15 @@ package com.zki.mission.data.model;
 
 import java.util.Date;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
-
 
 import lombok.Getter;
 import lombok.Setter;
@@ -40,13 +39,13 @@ public class Mission {
 	@Column(name = "Titre")
 	private String titre;
 	
-	@ManyToOne(cascade = CascadeType.ALL)
-	@JoinColumn(name = "Ressource")
-	private Ressource ressource;
-	
-	@ManyToOne(cascade = CascadeType.ALL)
-	@JoinColumn(name = "Service")
+	@JoinColumn(name="Service")
+	@OneToOne(fetch = FetchType.EAGER)
 	private Service service;
+	
+	@JoinColumn(name="Ressource")
+	@OneToOne(fetch = FetchType.EAGER)
+	private Ressource ressource;
 	
 	@Override
 	public String toString() {
